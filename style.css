@@ -2,7 +2,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(to bottom, #ffc2cc, #ff7474);
+  background: linear-gradient( #ffb8c4cb, #ff7474);
   min-height: 100vh;
   text-align: center;
   color: black;
@@ -11,46 +11,65 @@ body {
 .container {
   background-color: rgb(255, 255, 255);
   padding: 0px 20px;
-  width: 300px;
-  animation: fade-in-box 0.75s cubic-bezier(0.76, 0, 0.24, 1);
+  max-width: 300px;
+  width: 100%;
   box-shadow: 5px 5px 10px rgb(209, 148, 148);
+  animation-name: fade-in-box;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  
 }
 @keyframes fade-in-box {
   0% {
-    transform: translateY(0px);
+    opacity: 0.2;
+    transform: translateY(-80px);
   }
-  100% {
+    50%{
+    opacity: 0.5;
     transform: translateY(80px);
-  }
+}
+
+    100%{
+        opacity: 1;
+        transform: translateY(0)
+    }
 
 }
 
-.heading,
-.input-container,
-#todolist {
-  animation: fade-in-content 0.5s cubic-bezier(0.5, 1, 0.89, 1) forwards;
+.heading, .input-container, #todolist {
+  animation-name: fade-in-content;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
   opacity: 0;
+  
 }
 .heading {
-  animation-delay: 0.8s;
+  animation-delay: 0.6s;
 }
 .input-container {
-  animation-delay: 0.9s;
+  animation-delay: 0.7s;
 }
 #todolist {
-  animation-delay: 1s;
+  animation-delay: 0.8s;
 }
 @keyframes fade-in-content {
   0% {
+    opacity: 0;
+    
   }
   100% {
     opacity: 1;
+    
   }
 }
 
 .completed {
   text-decoration: line-through;
   color: grey;
+  transition: color 0.2s ease;
 }
 #message {
   font-style: italic;
@@ -61,7 +80,6 @@ body {
 }
 h1 {
   margin: 10px 0px 0px 0px;
-  font-size: 40px;
 }
 #infoTodo {
   margin: 10px 0px 20px 0px;
@@ -77,9 +95,12 @@ h1 {
   }
   
   #todoList li {
-    animation: liAnimation 0.2s ease-out;
+    animation-name: liAnimation;
+    animation-timing-function: ease-out;
+    animation-duration: 0.2s;
     list-style: none;
     font-size: 20px;
+    margin: 0px 0px 10px 0px;
   }
   span{
     margin: 0px 10px 0px 0px;
@@ -92,6 +113,12 @@ h1 {
     background: none;
     border: none;
     cursor: pointer;
+    transition-property: filter;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+  }
+  .delete-btn:hover{
+    filter: brightness(0.7);
   }
 
   
