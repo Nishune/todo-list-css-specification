@@ -5,8 +5,11 @@ body {
   background: linear-gradient( #ffb8c4cb, #ff7474);
   min-height: 100vh;
   text-align: center;
-  color: black;
-  
+  animation-name: fade-in-box;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 .container {
   background-color: rgb(255, 255, 255);
@@ -14,11 +17,7 @@ body {
   max-width: 300px;
   width: 100%;
   box-shadow: 5px 5px 10px rgb(209, 148, 148);
-  animation-name: fade-in-box;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
-  opacity: 0;
+
   
 }
 @keyframes fade-in-box {
@@ -40,20 +39,20 @@ body {
 
 .heading, .input-container, #todolist {
   animation-name: fade-in-content;
-  animation-duration: 0.5s;
+  animation-duration: 1s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
   opacity: 0;
   
 }
 .heading {
-  animation-delay: 0.6s;
+  animation-delay: 0.8s;
 }
 .input-container {
-  animation-delay: 0.7s;
+  animation-delay: 0.9s;
 }
 #todolist {
-  animation-delay: 0.8s;
+  animation-delay: 1s;
 }
 @keyframes fade-in-content {
   0% {
@@ -80,9 +79,11 @@ body {
 }
 h1 {
   margin: 10px 0px 0px 0px;
+  font-size: 2.5em;
 }
 #infoTodo {
   margin: 10px 0px 20px 0px;
+  font-size: 14px;
 }
 @keyframes liAnimation {
     0% {
@@ -99,8 +100,9 @@ h1 {
     animation-timing-function: ease-out;
     animation-duration: 0.2s;
     list-style: none;
-    font-size: 20px;
+    font-size: 18px;
     margin: 0px 0px 10px 0px;
+    font-family: Arial, Helvetica, sans-serif;
   }
   span{
     margin: 0px 10px 0px 0px;
