@@ -6,7 +6,6 @@ const infoTodo = document.querySelector("#infoTodo"); //This is the task-counter
 const todoList = document.querySelector("#todoList"); //This is list (ul).
 const message = document.querySelector("#message"); //This is the message to user if text is not entered.
 const todoArray = []; //The array.
-let taskCount = 0; //task counter.
 let completedCount = 0; //completed task counter.
 
 function updateTaskCount() {
@@ -20,6 +19,10 @@ addBtn.addEventListener("click", function () {
   //Checking if user entered any text, if not message to add a task.
   if (text.length == 0) {
     message.innerText = "Input must not be empty";
+
+    message.classList.remove('animate');
+    void message.offsetWidth;
+    message.classList.add('animate');
     return;
   }
   message.innerText = "";

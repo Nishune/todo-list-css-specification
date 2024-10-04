@@ -34,16 +34,13 @@ body {
         opacity: 1;
         transform: translateY(0)
     }
-
 }
-
 .heading, .input-container, #todolist {
   animation-name: fade-in-content;
   animation-duration: 1s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
   opacity: 0;
-  
 }
 .heading {
   animation-delay: 0.8s;
@@ -60,22 +57,33 @@ body {
     
   }
   100% {
-    opacity: 1;
-    
+    opacity: 1;  
   }
 }
-
 .completed {
   text-decoration: line-through;
   color: grey;
   transition: color 0.2s ease;
 }
+@keyframes messageBlink{
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 #message {
   font-style: italic;
-  font-size: 12px;
+  font-size: 10px;
   color: rgb(172, 1, 1);
-  transition: 1s;
-  margin: 0;
+  margin: 0px 0px 0px 22px;
+  opacity: 1;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+#message.animate {
+  animation: messageBlink 0.3s ease-in-out;
 }
 h1 {
   margin: 10px 0px 0px 0px;
@@ -83,7 +91,8 @@ h1 {
 }
 #infoTodo {
   margin: 10px 0px 20px 0px;
-  font-size: 14px;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 @keyframes liAnimation {
     0% {
@@ -94,18 +103,20 @@ h1 {
       transform: translateY(0);
     }
   }
-  
   #todoList li {
     animation-name: liAnimation;
     animation-timing-function: ease-out;
     animation-duration: 0.2s;
     list-style: none;
-    font-size: 18px;
-    margin: 0px 0px 10px 0px;
+    font-size: 16px;
+    margin: 0px 0px 5px 0px;
     font-family: Arial, Helvetica, sans-serif;
   }
+  #todoList{
+    padding: 0;
+  }
   span{
-    margin: 0px 10px 0px 0px;
+    margin: 0px 5px 0px 0px;
     cursor: pointer;
   }
   span:hover{
@@ -118,10 +129,18 @@ h1 {
     transition-property: filter;
     transition-duration: 0.3s;
     transition-timing-function: ease;
+    font-size: 10px;
   }
   .delete-btn:hover{
-    filter: brightness(0.7);
+    filter: brightness(0.8);
   }
-
-  
+#inputTodo {
+  transition: border-color;
+  outline: none;
+  border-radius: 3px;
+  border: 1.5px solid #ccc;
+}
+#inputTodo:focus {
+  border: 1.5px solid rgb(57, 77, 255);
+}
 
