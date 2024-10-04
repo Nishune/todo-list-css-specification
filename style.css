@@ -16,7 +16,7 @@ body {
   padding: 0px 20px;
   max-width: 300px;
   width: 100%;
-  box-shadow: 5px 5px 10px rgb(209, 148, 148);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.24);
 
   
 }
