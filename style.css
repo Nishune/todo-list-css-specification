@@ -2,7 +2,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient( #ffb8c4cb, #ff7474);
+  background: linear-gradient( #fec5c4, #ff7c7c);
   min-height: 100vh;
   text-align: center;
   animation-name: fade-in-box;
@@ -13,9 +13,9 @@ body {
 }
 .container {
   background-color: rgb(255, 255, 255);
-  min-width: 933px;
+  min-width: 983px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.24);
-  min-height: 396px;
+  min-height: 417px;
   margin: 12px 0px 0px 0px;
 }
 @keyframes fade-in-box {
@@ -60,7 +60,7 @@ body {
 }
 .completed {
   text-decoration: line-through;
-  color: grey;
+  color: #7c7c7c;
   transition: color 0.2s ease;
 }
 #message {
@@ -68,7 +68,7 @@ body {
   color: #d8161c;
   opacity: 1;
   font-family: Arial, Helvetica, sans-serif;
-  margin: 11px 5px 30px 0px;
+  margin: 14px 0px 0px 10px;
   font-size: 30px;
 }
 @keyframes messageBlink{
@@ -95,11 +95,12 @@ body {
 }
 h1 {
   margin: 33px 0px 0px 0px;
-  font-size: 93px;
+  font-size: 97px;
 }
 #infoTodo {
-  margin: 28px 0px 20px 0px;
-  font-size: 28px;
+  margin: 30px 0px 23px 0px;
+  font-size: 29px;
+  font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
 }
 @keyframes liAnimation {
@@ -116,13 +117,14 @@ h1 {
     animation-timing-function: ease-out;
     animation-duration: 0.2s;
     list-style: none;
-    font-size: 46px;
-    margin: 0px 0px 15px 0px;
+    font-size: 50px;
+    margin: 0px 0px 27px 0px;
     font-family: Arial, Helvetica, sans-serif;
   }
   #todoList{
-    margin: 45px 0px 0px 0px;
-    padding: 0px 0px 47px 0px;
+    margin: 45px 0px 77px 0px;
+    padding: 0;
+
   }
   span{
     cursor: pointer;
@@ -138,6 +140,9 @@ h1 {
     transition-duration: 0.3s;
     transition-timing-function: ease;
     font-size: 28px;
+    padding: 0;
+    width: 69px;
+    margin: 0px 0px 0px 8px;
   }
   .delete-btn:hover{
     filter: brightness(0.8);
@@ -145,31 +150,30 @@ h1 {
   }
 #inputTodo {
   outline: none;
-  border-radius: 5px;
-  border: 1px solid #6c6c6c;
-  padding: 15px;
-  width: 404px;
-  height: 29px;
-  margin: 40px 8px 0px 0px;
-  font-size: 38px;
+  padding: 0;
+  border-radius: 7px;
+  border: 2px solid #6c6c6c;
+  width: 458px;
+  height: 64px;
+  margin: 42px 8px 0px 0px;
+  font-size: 39px;
 }
 button {
-  border: 1px solid #000;
-  padding: 5px 20px;
-  border-radius: 5px;
+  border: 2px solid #6c6c6c;
+  border-radius: 7px;
   font-family: Arial, Helvetica, sans-serif;
-  height: 62px;
-  width: 99px;
+  
+  width: 107px;
   font-size: 40px;
+  background-color: #ededed;
+  padding: 9px;
+}
+button:hover{
   background-color: #e0e0e0;
 }
 #inputTodo:focus {
   border: 3px solid #0254c8;
 }
-input[type="text"] {
-  border: 1px solid #3b3b3b;
-}
-
 button:hover{
   background-color: rgb(226, 226, 226);
 }
