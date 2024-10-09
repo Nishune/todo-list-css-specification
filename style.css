@@ -35,8 +35,8 @@ body {
 }
 .heading, .input-container, #todolist {
   animation-name: fade-in-content;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in;
   animation-fill-mode: forwards;
   opacity: 0;
 }
@@ -91,7 +91,7 @@ body {
 #message.animate{
   animation-name: messageBlink;
   animation-duration: 1s;
-  animation-timing-function: ease-out;
+  animation-timing-function: ease-in;
 }
 h1 {
   margin: 33px 0px 0px 0px;
@@ -106,7 +106,7 @@ h1 {
 @keyframes liAnimation {
     0% {
       
-      transform: translateY(20px);
+      transform: translateY(30px);
     }
     100% {
       transform: translateY(0);
@@ -114,8 +114,8 @@ h1 {
   }
   #todoList li {
     animation-name: liAnimation;
-    animation-timing-function: ease-out;
-    animation-duration: 0.2s;
+    animation-timing-function: ease-in;
+    animation-duration: 0.1s;
     list-style: none;
     font-size: 50px;
     margin: 0px 0px 27px 0px;
