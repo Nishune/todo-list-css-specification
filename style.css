@@ -36,7 +36,7 @@ body {
 }
 
 .heading, .inputContainer, #todolist {
-  animation-name: fade-in-content;
+  animation-name: fadeInContent;
   animation-duration: 0.3s;
   animation-timing-function: ease-in;
   animation-fill-mode: forwards;
@@ -55,7 +55,7 @@ body {
   animation-delay: 1s;
 }
 
-@keyframes fade-in-content {
+@keyframes fadeInContent {
   0% {
     opacity: 0;
   }
