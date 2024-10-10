@@ -79,6 +79,12 @@ body {
   font-size: 30px;
 }
 
+#message.animate {
+  animation-name: messageBlink;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+}
+
 @keyframes messageBlink {
   0% {
     opacity: 1;
@@ -95,12 +101,6 @@ body {
   100% {
     opacity: 1;
   }
-}
-
-#message.animate {
-  animation-name: messageBlink;
-  animation-duration: 1s;
-  animation-timing-function: ease-in;
 }
 
 h1 {
