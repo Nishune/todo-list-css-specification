@@ -48,7 +48,7 @@ addBtn.addEventListener("click", function () {
   //adding the delete button with icons from Font Awesome, giving it class name and append it to the list.
   const deleteBtn = document.createElement("button");
   deleteBtn.textContent = '🗑️';
-  deleteBtn.className = "delete-btn";
+  deleteBtn.className = "deleteBtn";
   listItem.appendChild(deleteBtn);
 
   //Adding event listener for the delete button
