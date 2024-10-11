@@ -155,7 +155,7 @@ span:hover {
   cursor: pointer;
   transition-property: filter;
   transition-duration: 0.2s;
-  transition-timing-function: ease-in;
+  transition-timing-function: ease-out;
   font-size: 28px;
   padding: 0;
   width: 69px;
