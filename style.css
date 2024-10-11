@@ -67,7 +67,9 @@ body {
 .completed {
   text-decoration: line-through;
   color: #7c7c7c;
-  transition: color 0.2s ease;
+  transition-property: color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
 }
 
 #message {
